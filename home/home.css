@@ -8,7 +8,7 @@ a {
 .cabecalho {
     background-color: var(--azul-escuro);
 
-    display: flex; 
+    display: flex;
     /* POR PADRÃO O FLEX VEM NA DIREÇÃO ROW/LINHA, então não precisa do flex direction */
 
     /* alinha n sentido do flex */
@@ -68,7 +68,7 @@ a {
     display: flex;
     flex-direction: column;
 
-    align-items: flex-start ;
+    align-items: flex-start;
     justify-content: center;
     gap: 50px;
 }
@@ -92,15 +92,16 @@ a {
 
 .botao:hover {
     background-color: #2ab2ab;
-    color: var(--branco)
+    color: var(--branco);
 }
 
 .banner-principal img {
     align-self: flex-end;
-    width: 25%;
+    width: 35%;
 }
 
-/* Título das seções */
+/* TÍTULO DAS SEÇÕES */
+
 .titulo-secao {
     display: flex;
     flex-direction: column;
@@ -119,7 +120,7 @@ a {
     background-color: var(--cor-destaque);
 }
 
-/* Secao benefícios */
+/* Seçãõ beneficios */
 
 .beneficios {
     padding: 50px 120px;
@@ -129,6 +130,7 @@ a {
 
     align-items: center;
     justify-content: space-between;
+
     gap: 100px;
 }
 
@@ -149,16 +151,18 @@ a {
     align-items: center;
     justify-content: center;
 
-    padding: 80px 20px 50px;  /* em cima -> direita e esquerda -> embaixo */
+    padding: 80px 20px 50px;
+    /* em cima -> direita e esquerda -> embaixo*/
 
     border: 1px solid var(--azul-escuro);
     border-radius: 30px;
-    box-shadow: 5px 5px 30px rgba(0, 0 , 0, 0.25); /*  -> y -> blur(desfoque) -> cor com transparência */
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+    /* x -> y -> blur(desfoque) -> cor com transparência */
 
     text-align: center;
 
-    /* Cria referência de posicionamento para o ícone, quando o ícone for posicionado, usa esse card como referência */
-    /* Sem isso, o círculo poderia usar outro elemento da págna como referência e sair passeando pelo layout. */
+    /* Cria referência de posicionamento para o ícone, quando o icone for posicionado, usa esse card como referência */
+    /* sem isso, o círculo poderia usar outro elemento da página como referência e sair passeando pelo layout */
     position: relative;
 }
 
@@ -178,18 +182,19 @@ a {
     /* Retira o ícone do fluxo normal, com o absolute ele pode ficar por cima do card */
     position: absolute;
 
-    /* Move o elemento pra cima, o valor negativo faz ele sair parcialmente do card */
+    /* Move o elemento para cima, e o valor negativo faz ele sair parcialmente do card */
     top: -15%;
 
-    /* Coloca o começo elemente em 50% da largura do card */
+    /* Coloca o começo do elemento em 50% da largura do card */
     left: 50%;
 
-    /* ajustamos o posicionamento do elemento, mas a borda esquerda do círculo fica no centron não o círculo inteiro */
+    /* Ajustamos o posicionamento do elemnto, mas a borda esquerda do círculo fica no centro, não o círculo inteiro*/
     transform: translateX(-50%);
 
     display: grid;
 
-    /* place-items: center; é a mesma coisa que colocar align-items: center; e justify-items: center */
+    /* place-items: center; é a mesma coisa que colocar: 
+       align-items: center; e justify-items: center; */
     place-items: center;
 }
 
@@ -218,12 +223,160 @@ a {
 
     padding: 0 120px;
     color: var(--branco);
+
 }
 
-.livros h2
-{
+.livros-recomendados {
+    padding: 50px 120px;
+    margin-bottom: 120px;
+}
+
+.livros {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.recomendado h3 {
+    height: 30px;
+    width: 200px;
     font-size: 1.5em;
-    margin-top: 20px;
-    
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.titulo-secao span {
+    margin-bottom: 30px;
+}
+
+.recomendado img {
+    width: 100%;
+    height: 400px;
+
+    padding: 20px;
+    margin-bottom: 0px;
 
 }
+
+.recomendado h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.recomendado {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape {
+    background-color: var(--azul-escuro);
+    padding: 110px 120px 100px;
+}
+
+.logos {
+    display: grid;
+    flex-direction: column;
+    gap: 70px;
+
+}
+
+.rodape p {
+    color: var(--branco);
+    padding: 0px 130px;
+}
+
+.biblioteca h4,
+.quemsomos h4 {
+    margin-bottom: 25px;
+}
+
+.rodape p {
+    margin-bottom: 10px;
+}
+
+.conteudo-rodape {
+    display: flex;
+    justify-content: space-between;
+}
+
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.textos {
+    display: grid;
+    gap: 75px;
+}
+
+.redes-sociais {
+    margin-bottom: 50px;
+    align-items: center;
+    margin-right: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos-redes {
+    display: flex;
+    margin: 5px;
+    gap: 40px;
+}
+
+.biblioteca h4 {
+    color: var(--cor-destaque);
+    transform: translateX(130px);
+}
+
+.quemsomos h4 {
+    color: var(--cor-destaque);
+    transform: translateX(130px);
+}
+
+.redes-sociais h4 {
+    color: var(--cor-destaque);
+    transform: translateX(130px);
+}
+
+
+.logos span {
+    background-color: var(--branco);
+    height: 1px;
+    width: 150px;
+}
+
+.linha {
+    background-color: var(--branco);
+    height: 1px;
+    margin-top: 10px;
+}
+
+.bibliotec {
+    display: flex;
+    align-items: center;
+    padding: 25px 3px;
+}
+
+.arroba p {
+    margin-left: -130px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    margin-left: auto;
+}
+
+.links p {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}   
