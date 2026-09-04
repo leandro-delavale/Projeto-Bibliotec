@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -7,16 +9,61 @@
 :root {
     --azul-escuro: #26333D;
     --texto: #26333D;
-    --branco: #fff;
-    --cor-destaque: #2fd6cb;
+    --branco: #FFFFFF;
+    --cor-destaque: #2FD6CB;
+    --fundos: #E9F0EF;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--branco);
     color: var(--texto);
+}
+
+
+
+/*  CABEÇALHO */
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.cabecalho {
+    background-color: var(--azul-escuro);
+
+    display: flex;
+    /* POR PADRÃO O FLEX VEM NA DIREÇÃO ROW/LINHA, então não precisa do flex direction */
+
+    /* alinha n sentido do flex */
+    justify-content: space-between;
+
+    /* alinha no sentido contrário do flex */
+    align-items: center;
+
+    padding: 0 120px;
+
+    height: 10vh;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.navegacao a {
+    text-transform: uppercase;
+
+    /* 1rem -> equivale a 16px (padrão da raiz do HTML) */
+    /* 1em -> pega o tamanho da tipografia do elemento pai */
+    font-size: 1em;
+    font-weight: 500;
+
 }
