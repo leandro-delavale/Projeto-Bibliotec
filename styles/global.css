@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 * {
     padding: 0;
     margin: 0;
@@ -12,12 +13,12 @@
     --branco: #FFFFFF;
     --cor-destaque: #2FD6CB;
     --fundos: #E9F0EF;
+    --textos-paginas: #535353;
 }
 
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -25,9 +26,7 @@ body {
     color: var(--texto);
 }
 
-
-
-/*  CABEÇALHO */
+/* CABEÇALHO */
 
 a {
     color: var(--branco);
@@ -38,9 +37,10 @@ a {
     background-color: var(--azul-escuro);
 
     display: flex;
-    /* POR PADRÃO O FLEX VEM NA DIREÇÃO ROW/LINHA, então não precisa do flex direction */
+    /* flex-direction: row; */
+    /* por padrão o flex vem na direção row/linha */
 
-    /* alinha n sentido do flex */
+    /* alinha no sentido do flex */
     justify-content: space-between;
 
     /* alinha no sentido contrário do flex */
@@ -48,7 +48,7 @@ a {
 
     padding: 0 120px;
 
-    height: 10vh;
+    height: 10vh; /* 10% da visualização vertical do dispositivo/navegador*/
 }
 
 .navegacao {
@@ -61,9 +61,8 @@ a {
 .navegacao a {
     text-transform: uppercase;
 
-    /* 1rem -> equivale a 16px (padrão da raiz do HTML) */
-    /* 1em -> pega o tamanho da tipografia do elemento pai */
-    font-size: 1em;
+    /* 1rem -> equivale a 16px (padrão da raíz do HTML) */
+    /* em -> pega o tamanho da tipografia do elemento pai */
+    font-size: 1em; 
     font-weight: 500;
-
 }
