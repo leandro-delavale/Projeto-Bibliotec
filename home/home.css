@@ -1,46 +1,4 @@
-/*  CABEÇALHO */
-
-a {
-    color: var(--branco);
-    text-decoration: none;
-}
-
-.cabecalho {
-    background-color: var(--azul-escuro);
-
-    display: flex;
-    /* POR PADRÃO O FLEX VEM NA DIREÇÃO ROW/LINHA, então não precisa do flex direction */
-
-    /* alinha n sentido do flex */
-    justify-content: space-between;
-
-    /* alinha no sentido contrário do flex */
-    align-items: center;
-
-    padding: 0 120px;
-
-    height: 10vh;
-}
-
-.navegacao {
-    display: flex;
-    align-items: center;
-
-    gap: 50px;
-}
-
-.navegacao a {
-    text-transform: uppercase;
-
-    /* 1rem -> equivale a 16px (padrão da raiz do HTML) */
-    /* 1em -> pega o tamanho da tipografia do elemento pai */
-    font-size: 1em;
-    font-weight: 500;
-
-}
-
 /* CONTEÚDO PRINCIPAL */
-
 
 /* Primeiro banner */
 
@@ -51,6 +9,7 @@ a {
 
     background-image: url(../imgs/banner-principal-home.png);
     background-size: cover;
+
     /* background-repeat: no-repeat; */
 
     /* overflow: hidden; evita que os elementos transbordem */
@@ -88,6 +47,8 @@ a {
 
     font-size: 1.2em;
     font-weight: 700;
+
+    text-transform: uppercase;
 }
 
 .botao:hover {
@@ -100,7 +61,7 @@ a {
     width: 35%;
 }
 
-/* TÍTULO DAS SEÇÕES */
+/* Titulo das seções */
 
 .titulo-secao {
     display: flex;
@@ -120,7 +81,7 @@ a {
     background-color: var(--cor-destaque);
 }
 
-/* Seçãõ beneficios */
+/* Seção Benefícios */
 
 .beneficios {
     padding: 50px 120px;
@@ -152,7 +113,7 @@ a {
     justify-content: center;
 
     padding: 80px 20px 50px;
-    /* em cima -> direita e esquerda -> embaixo*/
+    /* em cima -> direita e esquerda -> embaixo */
 
     border: 1px solid var(--azul-escuro);
     border-radius: 30px;
@@ -161,8 +122,8 @@ a {
 
     text-align: center;
 
-    /* Cria referência de posicionamento para o ícone, quando o icone for posicionado, usa esse card como referência */
-    /* sem isso, o círculo poderia usar outro elemento da página como referência e sair passeando pelo layout */
+    /* Cria referência de posicionamento para o ícone, quando o ícone for posicionado, usa esse card como referência */
+    /* sem isso, o círculo poderia usar outro elemento da página como referência e sair passeando pelo layout. */
     position: relative;
 }
 
@@ -182,19 +143,19 @@ a {
     /* Retira o ícone do fluxo normal, com o absolute ele pode ficar por cima do card */
     position: absolute;
 
-    /* Move o elemento para cima, e o valor negativo faz ele sair parcialmente do card */
+    /* Move o elemento pra cima, o valor negativo faz ele sair parcialmente do card */
     top: -15%;
 
-    /* Coloca o começo do elemento em 50% da largura do card */
+    /* Coloca o começo elemento em 50% da largura do card */
     left: 50%;
 
-    /* Ajustamos o posicionamento do elemnto, mas a borda esquerda do círculo fica no centro, não o círculo inteiro*/
+    /* ajustamos o posicionamento do elemento, mas a borda esquerda do círculo fica no centro, não o círculo inteiro */
     transform: translateX(-50%);
 
     display: grid;
 
-    /* place-items: center; é a mesma coisa que colocar: 
-       align-items: center; e justify-items: center; */
+    /* place-items: center; é a mesma coisa que colocar:
+        align-items: center; e justify-items: center; */
     place-items: center;
 }
 
@@ -223,160 +184,382 @@ a {
 
     padding: 0 120px;
     color: var(--branco);
-
 }
 
-.livros-recomendados {
+/* ACERVO */
+
+.acervo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 100px;
     padding: 50px 120px;
-    margin-bottom: 120px;
 }
 
 .livros {
-    display: flex;
-
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     justify-content: center;
-    gap: 50px;
+    gap: 5%;
 }
 
-.recomendado h3 {
-    height: 30px;
-    width: 200px;
-    font-size: 1.5em;
-    margin-bottom: 40px;
+.livro {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
     text-align: center;
 }
 
-
-.titulo-secao span {
-    margin-bottom: 30px;
+.livro img {
+    height: 300px;
 }
 
-.recomendado img {
-    width: 100%;
-    height: 400px;
-
-    padding: 20px;
-    margin-bottom: 0px;
-
+.livro h3 {
+    text-transform: uppercase;
+    font-size: 1em;
+    width: 65%;
 }
 
-.recomendado h4 {
-    display: flex;
-    justify-content: center;
+.livro-texto {
+    font-size: 0.8em;
 }
 
-.recomendado {
-    display: flex;
-    flex-direction: column;
+/* footer - feito pelos alunos */
 
-    align-items: center;
-    justify-content: center;
-}
-
-.rodape {
+footer {
     background-color: var(--azul-escuro);
-    padding: 110px 120px 100px;
-}
-
-.logos {
-    display: grid;
-    flex-direction: column;
-    gap: 70px;
-
-}
-
-.rodape p {
     color: var(--branco);
-    padding: 0px 130px;
+    padding: 100px 120px 30px;
 }
 
-.biblioteca h4,
-.quemsomos h4 {
-    margin-bottom: 25px;
+.main {
+    display: flex;
+    justify-content: space-between;
 }
 
-.rodape p {
+.rodape-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+}
+
+.rodape-informacoes {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-footer p {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+
+}
+
+.nav-footer a {
+    color: var(--branco);
     margin-bottom: 10px;
 }
 
-.conteudo-rodape {
+.icones {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.informacoes {
+footer span {
     display: flex;
-    justify-content: space-between;
-    gap: 0px;
-}
-
-.textos {
-    display: grid;
-    gap: 75px;
-}
-
-.redes-sociais {
-    margin-bottom: 50px;
-    align-items: center;
-    margin-right: 35px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logos-redes {
-    display: flex;
-    margin: 5px;
-    gap: 40px;
-}
-
-.biblioteca h4 {
-    color: var(--cor-destaque);
-    transform: translateX(130px);
-}
-
-.quemsomos h4 {
-    color: var(--cor-destaque);
-    transform: translateX(130px);
-}
-
-.redes-sociais h4 {
-    color: var(--cor-destaque);
-    transform: translateX(130px);
-}
-
-
-.logos span {
-    background-color: var(--branco);
+    margin: 50px 0;
+    background-color: white;
     height: 1px;
-    width: 150px;
+    width: 100%;
 }
 
-.linha {
-    background-color: var(--branco);
-    height: 1px;
-    margin-top: 10px;
-}
-
-.bibliotec {
+.footer-inferior {
     display: flex;
-    align-items: center;
-    padding: 25px 3px;
+    justify-content: space-between;
 }
 
-.arroba p {
-    margin-left: -130px;
-}
-
-.links {
+.footer {
     display: flex;
-    align-items: center;
-    gap: 130px;
-    margin-left: auto;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.links p {
-    width: auto;
-    margin: 0;
-    padding: 0;
-}   
+.rodape-informacoes p {
+    color: var(--cor-destaque);
+    font-size: 1em;
+    font-weight: 700;
+    width: 100%;
+}
+
+.footer-inferior {
+    display: flex;
+}
+
+/* RESPONSIVIDADE */
+.botao-menu {
+    display: none;
+    /* esconde o elemento */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-menu i {
+    font-size: 2em;
+
+    color: var(--branco);
+    border-radius: 10px;
+}
+
+/* RESPONSIVIDADE COM TAMANHOS -> MEDIA QUERY */
+
+@media (max-width: 1024px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .cabecalho img {
+        width: 60%;
+    }
+
+    .texto-banner h1 {
+        text-align: center;
+    }
+
+    /* BENEFICIOS */
+
+    .beneficios {
+        gap: 50px;
+
+        padding: 30px 0;
+
+        overflow: hidden;
+    }
+
+    .beneficios-lista {
+        grid-template-columns: repeat(3, 30%);
+
+        overflow-x: scroll;
+        /*permite que o objeto role para o lado*/
+
+        padding: 50px 20px;
+
+        justify-content: flex-start;
+
+    }
+
+    .beneficios-lista::-webkit-scrollbar {
+        display: none;
+    }
+
+    .beneficio {
+        padding: 80px 10px 50px;
+    }
+
+    .beneficio h3 {
+        margin-bottom: 25px;
+        width: 60%;
+    }
+
+    .beneficio p {
+        width: 60%;
+    }
+
+    /* BANNER MEIO */
+
+    .banner-meio {
+        background-position: center;
+        padding: 0 30px;
+    }
+
+    .banner-meio .texto-banner {
+        align-items: flex-end;
+    }
+
+    .banner-meio .texto-banner p {
+        text-align: right;
+    }
+
+    /* ACERVO */
+    .acervo {
+        padding: 70px 40px;
+        gap: 50px;
+    }
+
+    .livros {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        gap: 40px 20px;
+    }
+
+    /* PARA QUEM USOU FLEX, COLOCAR NOS LIVROS
+        flex-wrap: wrap;
+    */
+
+    /* E NO article 
+        max-width: 100%
+    */
+
+    .livro img {
+        max-width: 100%;
+    }
+
+    .livro h3 {
+        font-size: 1.2em;
+    }
+
+    .livro-texto {
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        padding: 0 40px;
+
+        position: relative;
+    }
+
+    .botao-menu {
+        /* Faz o menu hamburguer aparecer novamente */
+        display: flex;
+    }
+
+    .navegacao {
+
+        background-color: var(--azul-escuro);
+
+        position: absolute;
+        /* distancia de 10vh do topo */
+        top: 10vh;
+
+        /* encosta na esquerda */
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 40px;
+
+        border-radius: 0 0 0 30px;
+
+        flex-direction: column;
+        align-items: flex-end;
+
+        gap: 20px;
+
+        /* só funciona com position, quanto maior o z-index, mais pra cima o elemento fica */
+        z-index: 100;
+
+        display: none;
+    }
+
+    .navegacao.ativo {
+        display: flex;
+    }
+
+    /* BANNER PRINCIPAL */
+
+    .banner-principal {
+        height: 50hv;
+
+        padding: 30px 0 10px 0;
+
+        position: relative;
+    }
+
+    .banner-principal .texto-banner {
+        width: 100%;
+        height: 100%;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .banner-principal .texto-banner h1 {
+        font-size: 2em;
+    }
+
+    .banner-principal .texto-banner p {
+        display: none;
+    }
+
+    .banner-principal img {
+        width: 35%;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 1;
+    }
+
+    .banner-principal .botao {
+        padding: 20px 40px;
+
+        font-size: 1.2em;
+
+        z-index: 2;
+    }
+
+    /* BENEFICIO */
+
+    .beneficios-lista {
+        grid-template-columns: repeat(3, 45%);
+    }
+
+    .beneficio-icone img {
+        width: 40%;
+    }
+
+    /* BANNER NO MEIO */
+    .banner-meio .texto-banner {
+        display: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .rodape-logos {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+
+    .rodape-informacoes {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+}

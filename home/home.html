@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliotec - Gestão de Bibliotecas</title>
-    <link rel="stylesheet" href="../home/home.css">
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="shortcut icon" href="../imgs/Icone - Bibliotec.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
     <header class="cabecalho">
         <a href="#">
-            <img src="../imgs/Logo Horizontal - branca.svg" alt="Logo so sistema Bibliotec.">
+            <img src="../imgs/Logo Horizontal - branca.svg" alt="Logo do sistema Bibliotec.">
         </a>
 
         <nav class="navegacao">
@@ -21,10 +23,15 @@
             <a href="#acervo">Nosso acervo</a>
             <a href="#acesso">Login</a>
         </nav>
-    </header>
 
+        <!-- RESPONSIVIDADE -->
+        <button class="botao-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
     <main>
         <section class="banner-principal">
+
             <div class="texto-banner">
                 <h1>Bem-vindo(a) ao Bibliotec</h1>
                 <p>O melhor gerenciador para biblioteca de maneira moderna e automatizada!</p>
@@ -65,7 +72,6 @@
                     <h3>Faça sua lista de favoritos</h3>
                     <p>Imagine livros que você ama, listados em um único lugar</p>
                 </article>
-
             </div>
         </section>
 
@@ -73,107 +79,107 @@
             <div class="texto-banner">
                 <h2>Acesse a nossa plataforma</h2>
                 <p>Faça o login ou solicite cadastro para a bibliotecária.</p>
-                <a href="" class="botao">Acessar</a>
+                <a href="../login/login.html" class="botao">Acessar</a>
             </div>
         </section>
 
-        <section class="livros-recomendados" id="acervo">
+        <section class="acervo" id="acervo">
             <div class="titulo-secao">
                 <h2>Top livros recomendados</h2>
                 <span></span>
             </div>
 
             <div class="livros">
-                <article class="recomendado">
-                    <img src="../imgs/livro-aescoladobememal.svg" alt="livro escola do bem e do mal">
-                    <h3>A ESCOLA DO BEM E DO MAL</h3>
-                    <h4>Autor(a):</h4>
-                    <P>Soman Chainani</P>
+
+                <article class="livro">
+                    <img src="../imgs/livro-aescoladobememal.svg" alt="">
+                    <h3>A escola do bem e do mal</h3>
+
+                    <div class="livro-texto">
+                        <h4>Autor(a):</h4>
+                        <p>Soman Chainani</p>
+                    </div>
                 </article>
 
-                <article class="recomendado">
-                    <img src="../imgs/livro-filhasdalua.svg" alt="livro filhas da lua">
-                    <h3>FILHAS DA LUA</h3>
-                    <h4>Autor(a):</h4>
-                    <P>Carolina França</P>
+                <article class="livro">
+                    <img src="../imgs/livro-filhasdalua.svg" alt="">
+                    <h3>Filhas da Lua</h3>
+
+                    <div class="livro-texto">
+                        <h4>Autor(a):</h4>
+                        <p>Carolina França</p>
+                    </div>
                 </article>
 
-                <article class="recomendado">
-                    <img src="../imgs/livro-ti.svg" alt="livro TI para negócios">
-                    <h3>TI PARA NEGÓCIOS</h3>
-                    <h4>Autor(a):</h4>
-                    <P>Edson Perin</P>
+                <article class="livro">
+                    <img src="../imgs/livro-ti.svg" alt="">
+                    <h3>TI para Negócios</h3>
+
+                    <div class="livro-texto">
+                        <h4>Autor(a):</h4>
+                        <p>Edson Perin</p>
+                    </div>
                 </article>
 
-                <article class="recomendado">
-                    <img src="../imgs/livro-mestredotempo.svg" alt="livro mestres do tempo">
-                    <h3>MESTRES DO TEMPO</h3>
-                    <h4>Autor(a):</h4>
-                    <P>Alessandra García</P>
+                <article class="livro">
+                    <img src="../imgs/livro-mestredotempo.svg" alt="">
+                    <h3>Mestres do Tempo</h3>
+
+                    <div class="livro-texto">
+                        <h4>Autor(a):</h4>
+                        <p>R.V. Campbell</p>
+                    </div>
                 </article>
 
             </div>
         </section>
-
-        <footer class="rodape">
-            <div class="conteudo-rodape">
-                <div class="logos">
-                    <img src="../imgs/Logo Horizontal - branca.svg" alt="">
-                    <img src="../imgs/SENAI_São_Paulo_logo 1.svg" alt="">
-                </div>
-
-                <div class="textos">
-
-                    <div class="informacoes">
-
-                        <div class="biblioteca">
-                            <h4>Biblioteca</h4>
-                            <p>Baixar aplicativo</p>
-                            <p>Suporte ao usuário</p>
-                        </div>
-
-                        <div class="quemsomos">
-                            <h4>Quem somos</h4>
-                            <p>Clientes</p>
-                            <p>Benefícios</p>
-                        </div>
-
-                    </div>
-
-                    <div class="redes-sociais">
-                        <h4>Siga nas redes sociais</h4>
-
-                        <div class="logos-redes">
-                            <img src="../imgs/icone-facebook.svg" alt="">
-                            <img src="../imgs/icone-instagram.svg" alt="">
-                            <img src="../imgs/icone-linkedin.svg" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="linha">
-                <span></span>
-            </div>
-            
-            <div class="bibliotec">
-
-                <div class="arroba">
-                    <p>@Biblio tec
-                </div>
-
-                <div class="links">
-                <p>Acessibilidade</p>
-                <p>Política de privacidade</p>
-                <p>Termos e condições</p>
-                </div>
-
-            </div>
-
-        </footer>
     </main>
 
+    <!-- FOOTER DESENVOLVIDO PELOS ALUNOS -->
+    <footer>
+        <section class="main">
+            <div class="rodape-logos">
+                <img src="../imgs/Logo Horizontal - branca.svg" alt="Bibliotec" />
+                <img src="../imgs/SENAI_São_Paulo_logo 1.svg" alt="SENAI" />
+            </div>
+
+            <div class="rodape-informacoes">
+                <nav class="nav-footer">
+                    <p>Biblioteca</p>
+                    <a href="#">Baixar aplicativos</a>
+                    <a href="#">Suporte ao usuário</a>
+                </nav>
+                <nav class="nav-footer">
+                    <p>Quem somos</p>
+                    <a href="# ">Clientes</a>
+                    <a href="#">Benefícios</a>
+                </nav>
+                <p>Siga nas redes sociais</p>
+                <nav class="rodape-icones">
+                    <a href="#facebook">
+                        <img src="../imgs/icone-facebook.svg" alt=" Icone do Facebook" />
+                    </a>
+                    <a href="#instagram">
+                        <img src="../imgs/icone-instagram.svg" alt="Icone do Instagram" />
+                    </a>
+                    <a href="#linkedin">
+                        <img src="../imgs/icone-linkedin.svg" alt="Linkedin" />
+                    </a>
+                </nav>
+            </div>
+        </section>
+
+        <span></span>
+
+        <section class="footer-inferior">
+            <p>&copy; Biblio Tec</p>
+            <nav class="footer">
+                <a href="#">Acessibilidade</a>
+                <a href="#">Politica de Privacidade</a>
+                <a href="#">Termos e condições</a>
+            </nav>
+        </section>
+    </footer>
 </body>
 
 </html>
