@@ -1,170 +1,3 @@
-/* Página */
-.pagina-listagem {
-    display: grid;
-    grid-template-columns: auto 1fr;
-}
-
-/* MENU LATERAL */
-.menu-lateral {
-    background-color: var(--azul-escuro);
-
-    height: 100vh;
-
-    border-radius: 0 30px 30px 0;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 30px 50px;
-}
-
-/* TOPO DO MENU */
-
-.topo-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.botao-voltar {
-    /* Largura e altura do botão */
-    width: 40px;
-    height: 40px;
-
-    font-size: 22px;
-    /* ajustar tamanho do icone */
-
-    border-radius: 50%;
-    border: 2px solid var(--cor-destaque);
-
-    background-color: transparent;
-    color: var(--branco);
-
-    align-self: flex-end;
-    cursor: pointer;
-}
-
-/* LOGO */
-
-.logo {
-    margin-top: 10%;
-    margin-bottom: 30%;
-    width: 40%;
-}
-
-/* NAVEGAÇÃO */
-
-.menu-navegacao {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.item-menu {
-    display: flex;
-    align-items: center;
-
-    gap: 20px;
-
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 700;
-}
-
-.item-menu i {
-    width: 30px;
-    font-size: 1.5em;
-}
-
-.item-menu:hover {
-    color: var(--cor-destaque);
-    padding-bottom: 10px;
-    border-bottom: 4px solid var(--cor-destaque);
-}
-
-/* BOTAO SAIR */
-
-.botao-sair {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 20px;
-
-    font-size: 1em;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    margin-top: auto;
-}
-
-.botao-sair i {
-    font-size: 30px;
-}
-
-.botao-sair:hover {
-    color: var(--cor-destaque);
-}
-
-/* CONTEÚDO */
-
-.conteudo-listagem {
-    display: flex;
-    flex-direction: column;
-
-    gap: 5%;
-
-    padding: 30px 60px;
-
-    background-color: var(--branco);
-
-    background-image: url(../../imgs/fundo-telas.svg);
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: right bottom;
-
-    height: 100vh;
-}
-
-/* CABECALHO MAIN */
-
-.cabecalho-pagina h1 {
-    font-size: 2em;
-    font-weight: 700;
-
-    margin-bottom: 10px;
-}
-
-.cabecalho-pagina p {
-    font-size: 1.2em;
-    color: var(--textos-paginas);
-
-}
-
-/* CARD PRINCIPAL */
-
-.card-listagem {
-    /*  APLICA O FILTRO DE DESFOQUE */
-    backdrop-filter: blur(50px);
-    background-color: rgba(255, 255, 255, 0.3);
-
-    border-radius: 30px;
-
-    padding: 40px;
-
-    height: auto;
-
-    box-shadow:
-        inset 0 20px 50px rgba(255, 255, 255, 0.5),
-        /* inset -> sombra interna*/
-        0 4px 4px rgba(0, 0, 0, 0.25);
-    /* sombra externa */
-
-    display: flex;
-    flex-direction: column;
-
-}
-
 /* BUSCA */
 
 .area-busca {
@@ -176,19 +9,31 @@
     margin-bottom: 30px;
 }
 
+
 .campo-busca {
+
+    /* esse elemento pode ocupar o espaço disponível dentro do container flex. */
     flex: 1;
+
+    /* 
+        flex: 1; é a mesma coisa que:
+            flex-grow: 1; o elemento pode crescer quando sobra espaço.
+            flex-shrink: 1; o elemento pode encolher quando não existe espaço suficiente.
+            flex-basis: 0%; fala para o elemento começar do 0% e junto com os outros, pode crescer ou diminuir.
+    */
 
     height: 50px;
     padding: 0 20px;
 
     border: 1px solid var(--cor-bordas);
     border-radius: 10px;
+
     background-color: var(--branco);
 
     display: flex;
     align-items: center;
     gap: 20px;
+
 }
 
 .campo-busca i {
@@ -202,7 +47,10 @@
     border: none;
     outline: none;
 
+    height: 100%;
+
     font-family: inherit;
+    /* estamos dizendo para herdar a fonte do pai */
     font-size: 1.1em;
     color: var(--textos-paginas);
 }
@@ -232,7 +80,6 @@
     font-weight: 600;
 
     cursor: pointer;
-
     transition: 0.2s;
 }
 
@@ -247,85 +94,67 @@
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* CABEÇALHO DA TELA */
-
 .cabecalho-lista {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-
+    grid-template-columns: 2fr repeat(4, 1fr);
     align-items: center;
-    padding: 0 20px 20px;
-
+    padding: 0 20px;
     font-weight: 700;
 }
 
-/* Alinhando o nome na esquerda */
 .cabecalho-lista h2:nth-child(1) {
     text-align: left;
 }
 
-/* Alinhando o restante ao centro */
 .cabecalho-lista h2 {
     text-align: center;
     font-size: 1em;
+    margin-bottom: 20px;
 }
-
-/* LISTA DE RESERVAS */
 
 .lista-livros {
     display: flex;
     flex-direction: column;
-
     gap: 20px;
 }
 
 .livro {
     display: grid;
-
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-
+    grid-template-columns: 2fr repeat(4, 1fr);
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-
     height: 60px;
-
     padding: 0 30px;
-
     border: 1px solid var(--cor-bordas);
     border-radius: 10px;
+    font-size: 1m;
+}
 
-    font-size: 1em;
+.livro p {
+    justify-self: center;
+    text-align: center;
 }
 
 .livro p:nth-child(1) {
     justify-self: flex-start;
 }
 
-/* STATUS DA RESERVA */
-
-.status-reserva {
-    font-weight: 600;
+.aguardando {
+    color: #D34A00;
 }
 
-.status-pendente {
-    color: #F2994A;
+.retirado {
+    color: #00A223;
 }
-
-.status-retirado {
-    color: #219653;
-}
-
-/* CHECKBOX */
 
 input[type="checkbox"] {
     height: 30px;
     width: 30px;
-
     border: 1px solid var(--textos-paginas);
     border-radius: 5px;
-
     appearance: none;
     cursor: pointer;
+    justify-self: center;
 }
 
 input[type="checkbox"]:checked {
@@ -334,32 +163,29 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:checked::after {
-    content: "✓";
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 100%;
     height: 100%;
-
+    width: 100%;
+    content: "✓";
     color: var(--branco);
     font-size: 20px;
     font-weight: 800;
 }
 
+
 /* RODAPÉ DA LISTAGEM */
 
 .rodape-listagem {
     margin-top: 30px;
-
     padding-top: 10px;
 
     border-top: 1px solid var(--cor-bordas);
 
     display: grid;
-    align-items: center;
-
     grid-template-columns: 1fr auto;
+    align-items: center;
 }
 
 .quantidade-livros {
@@ -384,13 +210,12 @@ input[type="checkbox"]:checked::after {
     font-size: 15px;
 
     cursor: pointer;
-
 }
 
 .pagina-atual {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     width: 30px;
     height: 30px;
